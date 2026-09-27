@@ -1,0 +1,16 @@
+{
+  "name": "lyralink",
+  "owner": {
+    "name": "LyraLink",
+    "url": "https://github.com/aaarnv/lstack"
+  },
+  "description": "LyraLink's Claude Code plugins.",
+  "plugins": [
+    {
+      "name": "lstack",
+      "source": "./plugins/lstack",
+      "description": "LyraLink's fork of pstack: rigorous agent workflows. Original pstack by Lauren Tan (poteto); Claude Code port by Michael Denyer.",
+      "version": "0.8.0"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "lstack",
+  "displayName": "lstack (LyraLink fork of pstack)",
+  "version": "0.8.0",
+  "description": "LyraLink's fork of pstack-claude v0.9.30. Rigorous agent workflows: go deep first, write less but higher quality code. Original pstack by Lauren Tan (poteto); Claude Code port by Michael Denyer.",
+  "author": {
+    "name": "LyraLink"
+  },
+  "homepage": "https://github.com/aaarnv/lstack",
+  "repository": "https://github.com/aaarnv/lstack",
+  "license": "MIT",
+  "keywords": [
+    "lstack",
+    "lyralink",
+    "pstack",
+    "poteto-mode",
+    "lyra-mode",
+    "workflow",
+    "principles",
+    "claude-code",
+    "skills"
+  ]
+}
