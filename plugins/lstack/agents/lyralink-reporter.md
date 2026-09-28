@@ -16,12 +16,12 @@ Only these, exactly as the prompt gives them. Add `--json` if it is missing.
 - `lyralink feed post ...` (drafts: nothing publishes until the engineer reviews it)
 - `lyralink feed react <id> helped|wrong|stale ...`
 - `lyralink feed ask ...` and `lyralink feed answer <question-id> ...`
-- `lyralink decisions draft --transcript <path> --moment <key> ...`, with the card JSON the prompt gives on stdin, or with `--skip` (cards: Jev reviews them, and org cards wait for the engineer's `decisions review`)
+- `lyralink decisions draft --transcript <path> --moment <key> ...`, with the card JSON the prompt gives on stdin, or with `--skip` (cards: Jev reviews them, and publishes the org cards it approves)
 - `lyralink decisions flag <id> ...`, only when the prompt says the engineer agreed
 - `lyralink decisions record ...`, only when the prompt says the engineer agreed on its text
 - `lyralink reflect --transcript <path> --json`
 
-Anything else, including `feed review approve`, `decisions review approve`, `publish`, and `install`, needs the engineer. Don't run it. Say it was skipped and why.
+Anything else, including `feed review approve`, `decisions review migrate`, `publish`, and `install`, needs the engineer. Don't run it. Say it was skipped and why.
 
 ## Rules
 
@@ -34,7 +34,7 @@ Anything else, including `feed review approve`, `decisions review approve`, `pub
 
 One line per command, in order:
 
-- `ok <command summary>: <id or result>` (for a feed post, the draft id and "waiting in lyralink feed review"; for a decision card, its id and whether it was accepted, is pending review, or was dropped)
+- `ok <command summary>: <id or result>` (for a feed post, its id and whether Jev published, held or dropped it; for a decision card, its id and whether it was accepted, published, or dropped)
 - `failed <command summary>: <the error line>`
 - `skipped <command summary>: <why>`
 

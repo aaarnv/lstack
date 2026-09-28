@@ -87,7 +87,7 @@ For each approved Accepted item, follow the Routing field exactly. Batch every `
   CARD
   ```
 
-  Leave out client names, file paths, branch names, URLs, tickets, identifiers, secrets, and code; the command strips and scans them anyway, and a secret rejects the card. Jev drops what isn't a real decision and keeps a card engagement-only unless it holds no client details. Org cards wait for the engineer's `lyralink decisions review approve <id>`; nothing reaches the org without it. A listed moment that is not a decision gets `--skip` instead of a card. A choice with no listed moment goes in the summary as a proposed card; when it replaces an accepted card, cite that card and suggest `lyralink decisions flag <id> --reason "<why>"`. Never flag a card by hand.
+  Leave out client names, file paths, branch names, URLs, tickets, identifiers, secrets, and code; the command strips and scans them anyway, and a secret rejects the card. Jev drops what isn't a real decision and keeps a card engagement-only unless it holds no client details. Org cards Jev approves are published to the org log; only the redacted card leaves the machine. A listed moment that is not a decision gets `--skip` instead of a card. A choice with no listed moment goes in the summary as a proposed card; when it replaces an accepted card, cite that card and suggest `lyralink decisions flag <id> --reason "<why>"`. Never flag a card by hand.
 - Skill edits stay local. Edit the skill file on this machine: the lstack checkout, `~/.claude/skills/`, or the engagement's skill. Sharing it with the team is a separate `lyralink publish`, which is the engineer's call.
 - Trivial existing-skill edit (a one-line bullet, a tightened sentence, a stale fact corrected): parent does directly.
 - Substantive existing-skill edit (a new section, a new pattern table, more than ~10 lines): hand to the **plugin-dev:skill-development** skill and run its draft / test / iterate loop.
@@ -101,7 +101,7 @@ If your environment ships a SKILL.md validator, run it on every touched skill be
 Short list, no preamble:
 
 - Feed drafts: `<post id>` `<kind>` "<title>", waiting in `lyralink feed review`. One line each, from step 2 and step 6.
-- Decision cards: `<id>` accepted, pending review, or dropped, with Jev's reason when dropped. Proposed cards with no listed moment, one line each.
+- Decision cards: `<id>` accepted, published, or dropped, with Jev's reason when dropped. Proposed cards with no listed moment, one line each.
 - Edits applied: `<skill path>`. What changed, one line each.
 - New skills created: `<skill path>`. One line each (rare).
 - Backlog filed to the devex tracker: `<issue title>` (`<tags>`). One line each.
